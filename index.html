@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>My Snake Game</title>
+</head>
+
+<body>
+    <h1>Snake game</h1>
+
+    <div class="container">
+        <div class="game-board"></div>
+
+        <div class="controlled__menu">
+            <div class="score__board">
+                <h2 class="score"> Highest score: <span id="high__score">0</span></h2>
+                <h2 class="score"> Score: <span id="score">0</span></h2>
+            </div>
+            <div class="stop__resume">
+                <button id="pauseBtn">Pause</button>
+                <button id="resumeBtn">Resume</button>
+
+            </div>
+            <div class="controlled__button">
+                <button id="upButton">Up</button>
+                <div class="left_right">
+                    <button id="leftButton"> Left </button>
+                    <button id="rightButton">Right</button>
+                </div>
+                <button id="downButton">Donw</button>
+
+            </div>
+            <div class="score__board1">
+                <h2 class="score"> Highest score: <span id="high__score">0</span></h2>
+                <h2 class="score"> Score: <span id="score">0</span></h2>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

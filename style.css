@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+.container {
+    height: 90%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    position: fixed;
+}
+
+.game-board {
+    height: 90vmin;
+    width: 90vmin;
+    /* box-shadow: inset 5px 5px 12px #ffffff, 
+                      5px 5px 12px rgb(229, 220, 220); */
+    /* background: linear-gradient(orange, yellow); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border: 1px solid black;
+    position:relative;
+}
+
+.stop__resume {
+    margin-bottom: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 30%;
+}
+
+.stop__resume button {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#pauseBtn {
+    margin-left: 10px;
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#resumeBtn {
+    width: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.controlled__button {
+    padding: 0 10px;
+    gap: 10px;
+    display: grid;
+}
+
+.controlled__button button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    font-weight: bold;
+
+}
+
+#upButton {
+    margin-left: 30%;
+
+}
+
+.left_right {
+    display: flex;
+    gap: 10px;
+}
+
+#downButton {
+
+    margin-left: 30%;
+
+
+}
+
+.score__board {
+    display: grid;
+    margin-top: 10%;
+    margin-bottom: 50%;
+    margin-left: 20px;
+    margin-top: -100%;
+
+}
+
+.high__score {
+    /* margin-bottom: 20%; */
+
+
+}
+
+.score {
+    /* margin-bottom: 50%; */
+
+
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.snake {
+    background: #219d00;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.head {
+    background: url(../img/snake.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    z-index: 22;
+}
+
+.food {
+    background: url(../img/apple.png);
+    background-size: 100% 100%;
+    z-index: 55;
+}
+
+.stop__resume {
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+}
+.score__board1{
+    display:none;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .score__board1{
+        display:none;
+    }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .score__board1{
+        display:none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container{
+        display: grid;
+       display: inline-grid;
+    }
+    .game-board{
+        height: 90vmin;
+        width: 90vmin;
+       
+    }
+    .controlled__button{
+        margin-left: 21px;
+    }
+  
+    .score__board{
+        display: none;
+      
+    }
+    .left_right{
+        gap: 75px;
+    }
+    
+
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .container{
+        display: grid;
+       display: inline-grid;
+    }
+    .game-board{
+        height: 90vmin;
+        width: 90vmin;
+       
+    }
+  
+    .score__board{
+        display: none;
+      
+    }
+    .left_right{
+        gap: 75px;
+    }
+    
+}
